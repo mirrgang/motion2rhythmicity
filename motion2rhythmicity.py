@@ -10,10 +10,10 @@ import numpy as np
 def main():
     sample_rate = 250
     directory_motion = "motion_phone"
-    directory_music = "annotations"
+    directory_music = "annotations_all_levels"
+    music = get_accentuation(directory_music, sample_rate)
     motion = get_movement_features(directory_motion, sample_rate)
     pre_processed_data = pre_process(motion)
-    music = get_accentuation(directory_music, sample_rate)
 
     results = compute_TLCC(pre_processed_data, music)
 
