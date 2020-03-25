@@ -99,58 +99,124 @@ def visualize_annotations(song_title):
     key_non_syncopated_2 = list(levels.keys())[0]
     key_syncopated_2 = list(levels.keys())[1]
 
-    cols = ['half note level', 'beat level', 'eighth note level']
     fig, axs = pyplot.subplots(ncols=3, nrows=5, sharex=True)
-    #for ax, col in zip(axs[0], cols):
-    #    ax.set_title(col)
 
-    points_non_syncopated = axs[0, 0].scatter(levels[key_non_syncopated_2]['tEnd'], levels[key_non_syncopated_2]['accentuation'])
-    # axs[0, 0].set_title('non-syncopated')
-
-    legend_elements = [Line2D([0], [0], marker='o', color='w', label='Scatter',
+    axs[0, 0].set_title('half note level')
+    axs[0, 0].scatter(levels[key_non_syncopated_2]['tEnd'], levels[key_non_syncopated_2]['accentuation'], c='b', marker='.')
+    #---------- legend non-syncopated------------
+    legend_elements = [Line2D([0], [0], marker='.', color='w', label='non-syncopated',
                               markerfacecolor='b', markersize=15)]
     axs[0, 0].legend(handles=legend_elements, loc='right')
+    #---------------------------------------------
+    axs[1, 0].scatter(levels[key_syncopated_2]['tEnd'], levels[key_syncopated_2]['accentuation'], c='b', marker='.')
+    # ---------- legend syncopated------------
+    legend_elements_syncopated = [Line2D([0], [0], marker='.', color='w', label='syncopated',
+                              markerfacecolor='b', markersize=15)]
+    axs[1, 0].legend(handles=legend_elements_syncopated, loc='right')
+    # ---------------------------------------------
+    list(merged_levels.values())[0].plot(x='tEnd', y='accentuation', ax=axs[2, 0], c='b')
+    # ---------- legend merged------------
+    legend_elements = [Line2D([0], [0], color='b', label='merged')]
+    axs[2, 0].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    list(pre_processed_annotation.values())[0].plot(x='tEnd', y='accentuation', ax=axs[3, 0], c='b')
+    # ---------- legend added zeros------------
+    legend_elements = [Line2D([0], [0], color='b', label='added zeros')]
+    axs[3, 0].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    resampled[list(resampled.keys())[0]].plot(x='tEnd', y='accentuation', ax=axs[4, 0], c='b')
+    # ---------- legend resampled------------
+    legend_elements = [Line2D([0], [0], color='b', label='resampled')]
+    axs[4, 0].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
 
-    points_syncopated = axs[1, 0].scatter(levels[key_syncopated_2]['tEnd'], levels[key_syncopated_2]['accentuation'])
-    # axs[1, 0].set_title('syncopated')
-    axs[1, 0].legend(points_syncopated, ['syncopated'])
-
-
-    list(merged_levels.values())[0].plot(x='tEnd', y='accentuation', ax=axs[2, 0])
-    axs[2, 0].set_title('merged')
-    list(pre_processed_annotation.values())[0].plot(x='tEnd', y='accentuation', ax=axs[3, 0])
-    axs[3, 0].set_title('added zeros')
-    resampled[list(resampled.keys())[0]].plot(x='tEnd', y='accentuation', ax=axs[4, 0])
-    axs[4, 0].set_title('resampled')
     ############# BEAT LEVEL ##########################################
     filter_beat = '[2-4]'
     levels_4 = read_annotation('annotations_all_levels', '/' + song_title + '*' + filter_beat + '_.csv', columns)
     merged_levels_4 = merge_levels(levels_4.copy())
     pre_processed_annotation_4 = add_zeros_between_annotations(merged_levels_4)
     resampled_4 = adjust_sampling_rate(pre_processed_annotation_4, 250)
-    key_syncopated_4 = list(levels_4.keys())[1]
+    search_key = 'syncopation_4'
+    key_syncopated_4 = [key for key in levels_4.keys() if search_key in key][0]
 
+    axs[0, 1].set_title('beat level')
+    axs[0, 1].scatter(levels[key_non_syncopated_2]['tEnd'], levels[key_non_syncopated_2]['accentuation'], c='b', marker='.')
+    axs[0, 1].scatter(levels[key_syncopated_2]['tEnd'], levels[key_syncopated_2]['accentuation'], c='b', marker='.')
+    # ---------- legend non-syncopated------------
+    legend_elements = [Line2D([0], [0], marker='.', color='w', label='non-syncopated',
+                              markerfacecolor='b', markersize=15)]
+    axs[0, 1].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
 
-    axs[0, 1].scatter(levels[key_non_syncopated_2]['tEnd'], levels[key_non_syncopated_2]['accentuation'])
-    axs[0, 1].scatter(levels[key_syncopated_2]['tEnd'], levels[key_syncopated_2]['accentuation'])
-    axs[0, 1].set_title('non-syncopated')
+    axs[1, 1].scatter(levels_4[key_syncopated_4]['tEnd'], levels_4[key_syncopated_4]['accentuation'], c='b', marker='.')
+    # ---------- legend non-syncopated------------
+    legend_elements = [Line2D([0], [0], marker='.', color='w', label='syncopated',
+                              markerfacecolor='b', markersize=15)]
+    axs[1, 1].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    list(merged_levels_4.values())[0].plot(x='tEnd', y='accentuation', ax=axs[2, 1], c='b')
+    # ---------- legend merged------------
+    legend_elements = [Line2D([0], [0], color='b', label='merged')]
+    axs[2, 1].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    list(pre_processed_annotation_4.values())[0].plot(x='tEnd', y='accentuation', ax=axs[3, 1], c='b')
+    # ---------- legend added zeros ------------
+    legend_elements = [Line2D([0], [0], color='b', label='added zeros')]
+    axs[3, 1].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
 
-    axs[1, 1].scatter(levels_4[key_syncopated_4]['tEnd'], levels_4[key_syncopated_4]['accentuation'])
-    axs[1, 1].set_title('syncopated')
-
-    list(merged_levels_4.values())[0].plot(x='tEnd', y='accentuation', ax=axs[2, 1])
-    axs[2, 1].set_title('merged')
-    list(pre_processed_annotation_4.values())[0].plot(x='tEnd', y='accentuation', ax=axs[3, 1])
-    axs[3, 1].set_title('added zeros')
-    resampled_4[list(resampled_4.keys())[0]].plot(x='tEnd', y='accentuation', ax=axs[4, 1])
-    axs[4, 1].set_title('resampled')
+    resampled_4[list(resampled_4.keys())[0]].plot(x='tEnd', y='accentuation', ax=axs[4, 1], c='b')
+    # ---------- legend resampled ------------
+    legend_elements = [Line2D([0], [0], color='b', label='resampled')]
+    axs[4, 1].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
 
     ############# EIGHTH NOTE LEVEL ###################################
     filter_eighth_note = '[2-8]'
+    levels_8 = read_annotation('annotations_all_levels', '/' + song_title + '*' + filter_eighth_note + '_.csv', columns)
+    merged_levels_8 = merge_levels(levels_8.copy())
+    pre_processed_annotation_8 = add_zeros_between_annotations(merged_levels_8)
+    resampled_8 = adjust_sampling_rate(pre_processed_annotation_8, 250)
+    search_key = 'syncopation_8'
+    key_syncopated_8 = [key for key in levels_8.keys() if search_key in key][0]
 
+    axs[0, 2].set_title('eighth note level')
+    axs[0, 2].scatter(levels[key_non_syncopated_2]['tEnd'], levels[key_non_syncopated_2]['accentuation'], c='b',
+                      marker='.')
+    axs[0, 2].scatter(levels[key_syncopated_2]['tEnd'], levels[key_syncopated_2]['accentuation'], c='b', marker='.')
+    axs[0, 2].scatter(levels_4[key_syncopated_4]['tEnd'], levels_4[key_syncopated_4]['accentuation'], c='b', marker='.')
+    # ---------- legend non-syncopated------------
+    legend_elements = [Line2D([0], [0], marker='.', color='w', label='non-syncopated',
+                              markerfacecolor='b', markersize=15)]
+    axs[0, 2].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
 
-    pyplot.ylim((0, 1))
-    pyplot.xlim((0, 25))
+    axs[1, 2].scatter(levels_8[key_syncopated_8]['tEnd'], levels_8[key_syncopated_8]['accentuation'], c='b', marker='.')
+    # ---------- legend non-syncopated------------
+    legend_elements = [Line2D([0], [0], marker='.', color='w', label='syncopated',
+                              markerfacecolor='b', markersize=15)]
+    axs[1, 2].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    list(merged_levels_8.values())[0].plot(x='tEnd', y='accentuation', ax=axs[2, 2], c='b')
+    # ---------- legend merged------------
+    legend_elements = [Line2D([0], [0], color='b', label='merged')]
+    axs[2, 2].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    list(pre_processed_annotation_8.values())[0].plot(x='tEnd', y='accentuation', ax=axs[3, 2], c='b')
+    # ---------- legend added zeros ------------
+    legend_elements = [Line2D([0], [0], color='b', label='added zeros')]
+    axs[3, 2].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+
+    resampled_4[list(resampled_8.keys())[0]].plot(x='tEnd', y='accentuation', ax=axs[4, 2], c='b')
+    # ---------- legend resampled ------------
+    legend_elements = [Line2D([0], [0], color='b', label='resampled')]
+    axs[4, 2].legend(handles=legend_elements, loc='right')
+    # ---------------------------------------------
+    for x1 in range(5):
+        for x2 in range(3):
+            axs[x1, x2].set_ylim(0, 1)
+            axs[x1, x2].set_xlim(0, 25)
     pyplot.show()
 
 song_title = 'Chandelier'
