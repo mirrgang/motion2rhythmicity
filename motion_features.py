@@ -7,8 +7,8 @@ from sklearn.decomposition import PCA
 
 def get_movement_features(directory, rate):
     motion = get_motion_data(directory)
-    #jerk = get_jerk(motion)
-    adjusted_motion_features = get_adjusted_motion(motion, rate)
+    jerk = get_jerk(motion)
+    adjusted_motion_features = get_adjusted_motion(jerk, rate)
     return adjusted_motion_features
 
 

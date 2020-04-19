@@ -28,10 +28,13 @@ from glob import glob
 # compare to norm of jerk instead of jerk?
 
 
-def get_accentuation(directory, rate):
-    annotation = read_annotation(directory)
-    adjusted_annotation = adjust_sampling_rate(annotation, rate)
-    return adjusted_annotation
+def get_accentuation(directory, filter, rate):
+    columns = ['tEnd', 'accentuation']  # time points only have end time in praat
+    levels = read_annotation(directory, '/*' + filter + '_.csv', columns)
+    merged_levels = merge_levels(levels.copy())
+    pre_processed_annotation = add_zeros_between_annotations(merged_levels)
+    resampled = adjust_sampling_rate(pre_processed_annotation, rate)
+    return resampled
 
 
 def read_annotation(directory, filter, columns):
@@ -221,4 +224,4 @@ def visualize_annotations(song_title):
 
 song_title = 'Chandelier'
 visualize_annotations(song_title)
-x = 1
+#x = 1
