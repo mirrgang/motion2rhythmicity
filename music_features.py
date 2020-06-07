@@ -31,7 +31,9 @@ from glob import glob
 def get_accentuation(directory, filter, rate):
     columns = ['tEnd', 'accentuation']  # time points only have end time in praat
     levels = read_annotation(directory, '/*' + filter + '_.csv', columns)
-    merged_levels = merge_levels(levels.copy())
+    #TODO merge per song, not all ;)
+    song_titles = get_song_titles(directory)
+    merged_levels = merge_levels_per_song(song_titles, levels.copy())
     pre_processed_annotation = add_zeros_between_annotations(merged_levels)
     resampled = adjust_sampling_rate(pre_processed_annotation, rate)
     return resampled
@@ -58,16 +60,32 @@ def adjust_sampling_rate(data, rate):
     return adjusted_data
 
 
+def merge_levels_per_song(song_titles, levels):
+    all_song_levels = {}
+    for song in song_titles:
+        current_level = {}
+        for key, val in levels.items():
+            if key.__contains__(song):
+                current_level[key] = val
+        all_song_levels[song] = merge_levels(current_level)
+    return all_song_levels
+
+
+def get_song_titles(directory):
+    file_names = glob(directory + '/*_.csv')
+    song_titles = []
+    for f in file_names:
+        song_titles.append(f.split('_')[2].split('/')[1])
+    return set(song_titles)
+
+
 def merge_levels(levels):
     first_key = list(levels.keys())[0]
     levels_merged = levels.pop(first_key)#remark just doing this whole thing because something had to be there to be merged in the first place
     for i, key in enumerate(levels, start=0):
         levels_merged = pd.concat([levels_merged, levels[key]]).sort_values(['tEnd'])
     levels_merged.reset_index(drop=True, inplace=True)
-    key = first_key.split("_", 3)[2].split("/", 1)[1]
-    dict = {}
-    dict[key] = levels_merged
-    return dict
+    return levels_merged
 
 
 def add_zeros_between_annotations(accentuation):
@@ -221,7 +239,3 @@ def visualize_annotations(song_title):
             axs[x1, x2].set_ylim(0, 1)
             axs[x1, x2].set_xlim(0, 25)
     pyplot.show()
-
-song_title = 'Chandelier'
-visualize_annotations(song_title)
-#x = 1
