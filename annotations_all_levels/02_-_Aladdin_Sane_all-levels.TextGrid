@@ -1,0 +1,659 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 25.14174603174603 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "TextTier" 
+        name = "eighth-note-level-syncopation" 
+        xmin = 0 
+        xmax = 25.14174603174603 
+        points: size = 97 
+        points [1]:
+            number = 0.24194260707917664 
+            mark = "0" 
+        points [2]:
+            number = 0.5096653248354366 
+            mark = "0" 
+        points [3]:
+            number = 0.7666791338814463 
+            mark = "0" 
+        points [4]:
+            number = 1.0397563059928314 
+            mark = "0" 
+        points [5]:
+            number = 1.296770115038841 
+            mark = "0" 
+        points [6]:
+            number = 1.5403977881970377 
+            mark = "0" 
+        points [7]:
+            number = 1.7813482341776716 
+            mark = "0" 
+        points [8]:
+            number = 2.033007588868556 
+            mark = "0" 
+        points [9]:
+            number = 2.2766352620267525 
+            mark = "0" 
+        points [10]:
+            number = 2.5282946167176372 
+            mark = "0" 
+        points [11]:
+            number = 2.782631198586084 
+            mark = "0" 
+        points [12]:
+            number = 3.042322234809656 
+            mark = "0" 
+        points [13]:
+            number = 3.304690498210791 
+            mark = "0" 
+        points [14]:
+            number = 3.5509953985465503 
+            mark = "0" 
+        points [15]:
+            number = 3.799977526059872 
+            mark = "0" 
+        points [16]:
+            number = 4.054314107928319 
+            mark = "0" 
+        points [17]:
+            number = 4.303296235441641 
+            mark = "0" 
+        points [18]:
+            number = 4.552278362954962 
+            mark = "0" 
+        points [19]:
+            number = 4.814646626356097 
+            mark = "0" 
+        points [20]:
+            number = 5.0770148897572325 
+            mark = "0" 
+        points [21]:
+            number = 5.33135147162568 
+            mark = "0" 
+        points [22]:
+            number = 5.593719735026814 
+            mark = "0" 
+        points [23]:
+            number = 5.850733544072823 
+            mark = "0" 
+        points [24]:
+            number = 6.099717968292397 
+            mark = "0" 
+        points [25]:
+            number = 6.340668414273031 
+            mark = "0" 
+        points [26]:
+            number = 6.589650541786353 
+            mark = "0" 
+        points [27]:
+            number = 6.841309896477238 
+            mark = "0" 
+        points [28]:
+            number = 7.095646478345684 
+            mark = "0" 
+        points [29]:
+            number = 7.355337514569257 
+            mark = "0" 
+        points [30]:
+            number = 7.593610733372328 
+            mark = "0" 
+        points [31]:
+            number = 7.853301769595901 
+            mark = "0" 
+        points [32]:
+            number = 8.09960666993166 
+            mark = "0" 
+        points [33]:
+            number = 8.351266024622545 
+            mark = "0" 
+        points [34]:
+            number = 8.591053896724672 
+            mark = "0" 
+        points [35]:
+            number = 8.842713251415557 
+            mark = "0" 
+        points [36]:
+            number = 9.094372606106441 
+            mark = "0" 
+        points [37]:
+            number = 9.348709187974888 
+            mark = "0" 
+        points [38]:
+            number = 9.60840022419846 
+            mark = "0" 
+        points [39]:
+            number = 9.852027897356658 
+            mark = "0" 
+        points [40]:
+            number = 10.103687252047541 
+            mark = "0" 
+        points [41]:
+            number = 10.34661880483651 
+            mark = "0" 
+        points [42]:
+            number = 10.587569250817143 
+            mark = "0" 
+        points [43]:
+            number = 10.844583059863153 
+            mark = "0" 
+        points [44]:
+            number = 11.104274096086725 
+            mark = "0" 
+        points [45]:
+            number = 11.355933450777608 
+            mark = "0" 
+        points [46]:
+            number = 11.615624487001181 
+            mark = "0" 
+        points [47]:
+            number = 11.880669977579878 
+            mark = "0" 
+        points [48]:
+            number = 12.124297650738074 
+            mark = "0" 
+        points [49]:
+            number = 12.370602551073834 
+            mark = "0" 
+        points [50]:
+            number = 12.61423022423203 
+            mark = "0" 
+        points [51]:
+            number = 12.871244033278039 
+            mark = "0" 
+        points [52]:
+            number = 13.113128993971605 
+            mark = "0" 
+        points [53]:
+            number = 13.354079439952239 
+            mark = "0" 
+        points [54]:
+            number = 13.603061567465561 
+            mark = "0" 
+        points [55]:
+            number = 13.852043694978882 
+            mark = "0" 
+        points [56]:
+            number = 14.098348595314642 
+            mark = "0" 
+        points [57]:
+            number = 14.3446534956504 
+            mark = "0" 
+        points [58]:
+            number = 14.598990077518847 
+            mark = "0" 
+        points [59]:
+            number = 14.856003886564856 
+            mark = "0" 
+        points [60]:
+            number = 15.099631559723054 
+            mark = "0" 
+        points [61]:
+            number = 15.334414989854988 
+            mark = "0" 
+        points [62]:
+            number = 15.588751571723435 
+            mark = "0" 
+        points [63]:
+            number = 15.859151516657258 
+            mark = "0" 
+        points [64]:
+            number = 16.126874234413517 
+            mark = "0" 
+        points [65]:
+            number = 16.383888043459528 
+            mark = "0" 
+        points [66]:
+            number = 16.63287017097285 
+            mark = "0" 
+        points [67]:
+            number = 16.884529525663734 
+            mark = "0" 
+        points [68]:
+            number = 17.13618888035462 
+            mark = "0" 
+        points [69]:
+            number = 17.403911598110877 
+            mark = "0" 
+        points [70]:
+            number = 17.64218481691395 
+            mark = "0" 
+        points [71]:
+            number = 17.875103581361895 
+            mark = "0" 
+        points [72]:
+            number = 18.113376800164968 
+            mark = "0" 
+        points [73]:
+            number = 18.348972791790477 
+            mark = "0" 
+        points [74]:
+            number = 18.58992323777111 
+            mark = "0" 
+        points [75]:
+            number = 18.828196456574183 
+            mark = "0" 
+        points [76]:
+            number = 19.097085422938942 
+            mark = "0" 
+        points [77]:
+            number = 19.34874477762983 
+            mark = "0" 
+        points [78]:
+            number = 19.589695223610462 
+            mark = "0" 
+        points [79]:
+            number = 19.849386259834034 
+            mark = "0" 
+        points [80]:
+            number = 20.106400068880045 
+            mark = "0" 
+        points [81]:
+            number = 20.352704969215804 
+            mark = "0" 
+        points [82]:
+            number = 20.593655415196437 
+            mark = "0" 
+        points [83]:
+            number = 20.856023678597573 
+            mark = "0" 
+        points [84]:
+            number = 21.105005806110896 
+            mark = "0" 
+        points [85]:
+            number = 21.348286452602288 
+            mark = "0" 
+        points [86]:
+            number = 21.581552243717038 
+            mark = "0" 
+        points [87]:
+            number = 21.838219026096244 
+            mark = "0" 
+        points [88]:
+            number = 22.10326451667494 
+            mark = "0" 
+        points [89]:
+            number = 22.362955552898512 
+            mark = "0" 
+        points [90]:
+            number = 22.60658322605671 
+            mark = "0" 
+        points [91]:
+            number = 22.847533672037343 
+            mark = "0" 
+        points [92]:
+            number = 23.09116134519554 
+            mark = "0" 
+        points [93]:
+            number = 23.340143472708863 
+            mark = "0" 
+        points [94]:
+            number = 23.59448005457731 
+            mark = "0" 
+        points [95]:
+            number = 23.846139409268197 
+            mark = "0" 
+        points [96]:
+            number = 24.144242925301825 
+            mark = "0" 
+        points [97]:
+            number = 24.492282458384963 
+            mark = "0" 
+    item [2]:
+        class = "TextTier" 
+        name = "beat-level-syncopation" 
+        xmin = 0 
+        xmax = 25.14174603174603 
+        points: size = 49 
+        points [1]:
+            number = 0.11879015691129705 
+            mark = "0.5" 
+        points [2]:
+            number = 0.6354950021808788 
+            mark = "0" 
+        points [3]:
+            number = 1.1736176648709615 
+            mark = "0.5" 
+        points [4]:
+            number = 1.6608730111873546 
+            mark = "0" 
+        points [5]:
+            number = 2.1564592951545007 
+            mark = "0.5" 
+        points [6]:
+            number = 2.656801521240642 
+            mark = "0" 
+        points [7]:
+            number = 3.178860820865349 
+            mark = "0.5" 
+        points [8]:
+            number = 3.6687933943593047 
+            mark = "0" 
+        points [9]:
+            number = 4.180143785273761 
+            mark = "0.5" 
+        points [10]:
+            number = 4.68346249465553 
+            mark = "0" 
+        points [11]:
+            number = 5.197490112747549 
+            mark = "0.5" 
+        points [12]:
+            number = 5.7222266395498185 
+            mark = "0" 
+        points [13]:
+            number = 6.220193191282714 
+            mark = "0.5" 
+        points [14]:
+            number = 6.715480219131796 
+            mark = "0" 
+        points [15]:
+            number = 7.22415338286869 
+            mark = "0.5" 
+        points [16]:
+            number = 7.724794865072896 
+            mark = "0" 
+        points [17]:
+            number = 8.225436347277101 
+            mark = "0.5" 
+        points [18]:
+            number = 8.716883574070115 
+            mark = "0" 
+        points [19]:
+            number = 9.21752505627432 
+            mark = "0.5" 
+        points [20]:
+            number = 9.728875447188777 
+            mark = "0" 
+        points [21]:
+            number = 10.22416247503786 
+            mark = "0.5" 
+        points [22]:
+            number = 10.713398928162585 
+            mark = "0" 
+        points [23]:
+            number = 11.224749319077041 
+            mark = "0.5" 
+        points [24]:
+            number = 11.74948584587931 
+            mark = "0" 
+        points [25]:
+            number = 12.250127328083517 
+            mark = "0.5" 
+        points [26]:
+            number = 12.742737128755035 
+            mark = "0" 
+        points [27]:
+            number = 13.228249762606795 
+            mark = "0.5" 
+        points [28]:
+            number = 13.723536790455878 
+            mark = "0" 
+        points [29]:
+            number = 14.226855499837646 
+            mark = "0.5" 
+        points [30]:
+            number = 14.72481975486429 
+            mark = "0" 
+        points [31]:
+            number = 15.212075101180682 
+            mark = "0.5" 
+        points [32]:
+            number = 15.719935703424003 
+            mark = "0" 
+        points [33]:
+            number = 16.258058366114085 
+            mark = "0.5" 
+        points [34]:
+            number = 16.75869984831829 
+            mark = "0" 
+        points [35]:
+            number = 17.272727466410313 
+            mark = "0.5" 
+        points [36]:
+            number = 17.751951131194016 
+            mark = "0" 
+        points [37]:
+            number = 18.231174795977722 
+            mark = "0.5" 
+        points [38]:
+            number = 18.707721233583865 
+            mark = "0" 
+        points [39]:
+            number = 19.229780533208572 
+            mark = "0.5" 
+        points [40]:
+            number = 19.718202128133466 
+            mark = "0" 
+        points [41]:
+            number = 20.229552519047925 
+            mark = "0.5" 
+        points [42]:
+            number = 20.72751677407457 
+            mark = "0" 
+        points [43]:
+            number = 21.225481029101214 
+            mark = "0.5" 
+        points [44]:
+            number = 21.710059148240045 
+            mark = "0" 
+        points [45]:
+            number = 22.237125875553073 
+            mark = "0.5" 
+        points [46]:
+            number = 22.721703994691904 
+            mark = "0" 
+        points [47]:
+            number = 23.216991022540984 
+            mark = "0.5" 
+        points [48]:
+            number = 23.720309731922754 
+            mark = "0" 
+        points [49]:
+            number = 24.328971600553643 
+            mark = "0.5" 
+    item [3]:
+        class = "TextTier" 
+        name = "half-note-syncopation" 
+        xmin = 0 
+        xmax = 25.14174603174603 
+        points: size = 24 
+        points [1]:
+            number = 0.8980798771881109 
+            mark = "0.5" 
+        points [2]:
+            number = 1.9040939498652563 
+            mark = "0.5" 
+        points [3]:
+            number = 2.913451388945853 
+            mark = "0.5" 
+        points [4]:
+            number = 3.925945436586459 
+            mark = "0.5" 
+        points [5]:
+            number = 4.944540554862861 
+            mark = "0.5" 
+        points [6]:
+            number = 5.972654025532916 
+            mark = "0.5" 
+        points [7]:
+            number = 6.969357363507561 
+            mark = "0.5" 
+        points [8]:
+            number = 7.973065023016276 
+            mark = "0.5" 
+        points [9]:
+            number = 8.964569776944321 
+            mark = "0.5" 
+        points [10]:
+            number = 9.977124650549925 
+            mark = "0.5" 
+        points [11]:
+            number = 10.977475132760752 
+            mark = "0.5" 
+        points [12]:
+            number = 12.007017627002135 
+            mark = "0.5" 
+        points [13]:
+            number = 12.99151805939611 
+            mark = "0.5" 
+        points [14]:
+            number = 13.974066105884425 
+            mark = "0.5" 
+        points [15]:
+            number = 14.986413302087232 
+            mark = "0.5" 
+        points [16]:
+            number = 15.98685053127589 
+            mark = "0.5" 
+        points [17]:
+            number = 17.005152710985772 
+            mark = "0.5" 
+        points [18]:
+            number = 17.99367997316028 
+            mark = "0.5" 
+        points [19]:
+            number = 18.958216671498093 
+            mark = "0.5" 
+        points [20]:
+            number = 19.98247383471505 
+            mark = "0.5" 
+        points [21]:
+            number = 20.988866047410784 
+            mark = "0.5" 
+        points [22]:
+            number = 21.972230351995943 
+            mark = "0.5" 
+        points [23]:
+            number = 22.96075761417045 
+            mark = "0.5" 
+        points [24]:
+            number = 23.971884576646175 
+            mark = "0.5" 
+    item [4]:
+        class = "TextTier" 
+        name = "half-note-non-syncopation" 
+        xmin = 0 
+        xmax = 25.14174603174603 
+        points: size = 25 
+        points [1]:
+            number = 0.37067343142467757 
+            mark = "0.5" 
+        points [2]:
+            number = 1.4127955451628642 
+            mark = "0.6" 
+        points [3]:
+            number = 2.395367823830297 
+            mark = "0.5" 
+        points [4]:
+            number = 3.427508088453892 
+            mark = "0.6" 
+        points [5]:
+            number = 4.427188858470432 
+            mark = "0.5" 
+        points [6]:
+            number = 5.460622708425046 
+            mark = "0.6" 
+        points [7]:
+            number = 6.461059937613705 
+            mark = "0.5" 
+        points [8]:
+            number = 7.477312072820451 
+            mark = "0.6" 
+        points [9]:
+            number = 8.461934395991022 
+            mark = "0.5" 
+        points [10]:
+            number = 9.482042766996885 
+            mark = "0.6" 
+        points [11]:
+            number = 10.462808854368342 
+            mark = "0.5" 
+        points [12]:
+            number = 11.48081847766625 
+            mark = "0.6" 
+        points [13]:
+            number = 12.487503246773963 
+            mark = "0.5" 
+        points [14]:
+            number = 13.479594188335614 
+            mark = "0.6" 
+        points [15]:
+            number = 14.46455777112298 
+            mark = "0.5" 
+        points [16]:
+            number = 15.445910404397928 
+            mark = "0.6" 
+        points [17]:
+            number = 16.501870603049834 
+            mark = "0.5" 
+        points [18]:
+            number = 17.514803628616363 
+            mark = "0.6" 
+        points [19]:
+            number = 18.466306687877616 
+            mark = "0.5" 
+        points [20]:
+            number = 19.466743917066275 
+            mark = "0.6" 
+        points [21]:
+            number = 20.467181146254934 
+            mark = "0.5" 
+        points [22]:
+            number = 21.455489791956005 
+            mark = "0.6" 
+        points [23]:
+            number = 22.491656922187115 
+            mark = "0.5" 
+        points [24]:
+            number = 23.462319233840397 
+            mark = "0.6" 
+        points [25]:
+            number = 24.63566960120768 
+            mark = "0.5" 
+    item [5]:
+        class = "TextTier" 
+        name = "bar-level" 
+        xmin = 0 
+        xmax = 25.14174603174603 
+        points: size = 12 
+        points [1]:
+            number = 1.4127955451628642 
+            mark = "1" 
+        points [2]:
+            number = 3.427508088453892 
+            mark = "1" 
+        points [3]:
+            number = 5.460622708425046 
+            mark = "1" 
+        points [4]:
+            number = 7.477312072820451 
+            mark = "1" 
+        points [5]:
+            number = 9.482042766996885 
+            mark = "1" 
+        points [6]:
+            number = 11.48081847766625 
+            mark = "1" 
+        points [7]:
+            number = 13.479594188335614 
+            mark = "1" 
+        points [8]:
+            number = 15.445910404397928 
+            mark = "1" 
+        points [9]:
+            number = 17.514803628616363 
+            mark = "1" 
+        points [10]:
+            number = 19.466743917066275 
+            mark = "1" 
+        points [11]:
+            number = 21.455489791956005 
+            mark = "1" 
+        points [12]:
+            number = 23.462319233840397 
+            mark = "1" 
