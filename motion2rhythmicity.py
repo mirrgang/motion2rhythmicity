@@ -1,14 +1,20 @@
+import random
+
+import pandas
+
 from motion_features import get_pca
 from motion_features import get_movement_features
 from music_features import get_accentuation
 import numpy as np
+from sklearn.metrics import classification_report
+from music_features import get_song_titles
 
 
 def main():
     sample_rate = 250
 
     directory_music = "annotations_all_levels"
-    filter_all_metrical_levels = '[2-4]'
+    filter_all_metrical_levels = '[2-8]'
     music = get_accentuation(directory_music, filter_all_metrical_levels, sample_rate)
 
     directory_motion = "motion_phone"
@@ -16,7 +22,30 @@ def main():
     pre_processed_data = pre_process(motion)
 
     results = compute_TLCC(pre_processed_data, music)
-    classify_by_TLCC(results)
+    target_names = list(get_song_titles(directory_music))
+    ### remove when complete
+    target_names.append("SpaceOddity")
+    target_names.append("AnotherStar")
+    target_names.append("CosmicLove")
+    target_names.append("Detroit")
+    target_names.append("GirlOnFire")
+    target_names.append("PeoplePleaser")
+    target_names.append("Tonight")
+    target_names.append("YouDontKnowMyName")
+    #####
+    y_true = get_true_labels(motion, target_names)
+    y_predicted = get_labels(classify_by_TLCC(results).values(), target_names)
+    y_random = classify_randomly(len(motion), 0, 13)
+
+    random_report = classification_report(y_true, y_random, target_names=target_names, output_dict=True, digits=4)
+    print(random_report)
+    random_report_df = pandas.DataFrame.from_dict(random_report).transpose()
+    random_report_df.to_csv('classification_results/classification_report_random.csv')
+    report_tlcc = classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=4)
+    tlcc_report_df = pandas.DataFrame(report_tlcc).transpose()
+    tlcc_report_df.to_csv('classification_results/classification_report_tlcc.csv')
+    print(report_tlcc)
+    print("done")
     #TODO classify and use new music annotations
 
     #### compute DTW
@@ -64,11 +93,35 @@ def compute_TLCC(motion_data, music):
         results[index] = corrs_per_sample
     return results
 
+
 def classify_by_TLCC(TLCC_results):
+    classification = {}
     for key in TLCC_results.keys():
         corrs_per_motion_sample = TLCC_results[key]
         max_corr = max(corrs_per_motion_sample, key=corrs_per_motion_sample.get)
+        classification[key] = max_corr
+    return classification
 
+
+def classify_randomly(n, start_id, end_id):
+    y = []
+    for i in range(0, n):
+        y.append(random.randint(start_id, end_id))
+    return y
+
+
+def get_true_labels(motion, target_classes):
+    true_labels = []
+    for index in motion:
+        title = index.split('_')[1].split('/')[1]
+        true_labels.append(target_classes.index(title))
+    return true_labels
+
+def get_labels(results, target_classes):
+    true_labels = []
+    for result in results:
+        true_labels.append(target_classes.index(result))
+    return true_labels
 
 if __name__ == "__main__":
     main()

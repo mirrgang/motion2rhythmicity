@@ -1,0 +1,18 @@
+,precision,recall,f1-score,support
+Monument,0.15,0.09,0.11,23.00
+Bad,0.12,0.57,0.20,23.00
+DryAndDusty,0.17,0.05,0.07,21.00
+AladdinSane,0.67,0.10,0.17,21.00
+Chandelier,0.07,0.60,0.12,20.00
+LeavingSong,0.00,0.00,0.00,19.00
+SpaceOddity,0.00,0.00,0.00,21.00
+AnotherStar,0.00,0.00,0.00,22.00
+CosmicLove,0.00,0.00,0.00,20.00
+Detroit,0.00,0.00,0.00,23.00
+GirlOnFire,0.00,0.00,0.00,23.00
+PeoplePleaser,0.00,0.00,0.00,23.00
+Tonight,0.00,0.00,0.00,22.00
+YouDontKnowMyName,0.00,0.00,0.00,23.00
+accuracy,0.10,0.10,0.10,0.10
+macro avg,0.08,0.10,0.05,304.00
+weighted avg,0.08,0.10,0.05,304.00
