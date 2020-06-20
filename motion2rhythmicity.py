@@ -29,22 +29,23 @@ def main():
     target_names.append("CosmicLove")
     target_names.append("Detroit")
     target_names.append("GirlOnFire")
-    target_names.append("PeoplePleaser")
-    target_names.append("Tonight")
     target_names.append("YouDontKnowMyName")
     #####
     y_true = get_true_labels(motion, target_names)
     y_predicted = get_labels(classify_by_TLCC(results).values(), target_names)
     y_random = classify_randomly(len(motion), 0, 13)
-
     random_report = classification_report(y_true, y_random, target_names=target_names, output_dict=True, digits=4)
     print(random_report)
+
+    print(classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=4))
+
     random_report_df = pandas.DataFrame.from_dict(random_report).transpose()
     random_report_df.to_csv('classification_results/classification_report_random.csv')
     report_tlcc = classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=4)
     tlcc_report_df = pandas.DataFrame(report_tlcc).transpose()
     tlcc_report_df.to_csv('classification_results/classification_report_tlcc.csv')
-    print(report_tlcc)
+
+    #print(report_tlcc)
     print("done")
     #TODO classify and use new music annotations
 
