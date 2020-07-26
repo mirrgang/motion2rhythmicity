@@ -1,0 +1,386 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 25.08950113378685 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "TextTier" 
+        name = "eighth-note-level-syncopation" 
+        xmin = 0 
+        xmax = 25.08950113378685 
+        points: size = 54 
+        points [1]:
+            number = 0.42073996000678554 
+            mark = "0.1" 
+        points [2]:
+            number = 0.8204010335909669 
+            mark = "0.1" 
+        points [3]:
+            number = 1.255330697285798 
+            mark = "0.1" 
+        points [4]:
+            number = 1.6858892085816861 
+            mark = "0.1" 
+        points [5]:
+            number = 2.1383034818722897 
+            mark = "0.1" 
+        points [6]:
+            number = 2.608202364758665 
+            mark = "0.1" 
+        points [7]:
+            number = 3.080286823844512 
+            mark = "0.1" 
+        points [8]:
+            number = 3.5414434019330012 
+            mark = "0.1" 
+        points [9]:
+            number = 4.009156708619905 
+            mark = "0.1" 
+        points [10]:
+            number = 4.46375655810998 
+            mark = "0.1" 
+        points [11]:
+            number = 4.9382672784216055 
+            mark = "0.1" 
+        points [12]:
+            number = 5.390681551712209 
+            mark = "0.1" 
+        points [13]:
+            number = 5.880250620393828 
+            mark = "0.1" 
+        points [14]:
+            number = 6.3829331462722765 
+            mark = "0.1" 
+        points [15]:
+            number = 6.847412969803023 
+            mark = "0.1" 
+        points [16]:
+            number = 7.282342633497855 
+            mark = "0.1" 
+        points [17]:
+            number = 7.73694248298793 
+            mark = "0.1" 
+        points [18]:
+            number = 8.20028463727589 
+            mark = "0.1" 
+        points [19]:
+            number = 8.646142181968079 
+            mark = "0.1" 
+        points [20]:
+            number = 9.113855488654982 
+            mark = "0.1" 
+        points [21]:
+            number = 9.561898609546644 
+            mark = "0.1" 
+        points [22]:
+            number = 10.025240763834605 
+            mark = "0.1" 
+        points [23]:
+            number = 10.497325222920452 
+            mark = "0.1" 
+        points [24]:
+            number = 10.97159525820577 
+            mark = "0.1" 
+        points [25]:
+            number = 11.41854162541172 
+            mark = "0.1" 
+        points [26]:
+            number = 11.870955898702324 
+            mark = "0.1" 
+        points [27]:
+            number = 12.336483629189756 
+            mark = "0.1" 
+        points [28]:
+            number = 12.808568088275603 
+            mark = "0.1" 
+        points [29]:
+            number = 13.28065254736145 
+            mark = "0.1" 
+        points [30]:
+            number = 13.74180912544994 
+            mark = "0.1" 
+        points [31]:
+            number = 14.21591132883532 
+            mark = "0.1" 
+        points [32]:
+            number = 14.674882330724339 
+            mark = "0.1" 
+        points [33]:
+            number = 15.144781213610715 
+            mark = "0.1" 
+        points [34]:
+            number = 15.60156663930026 
+            mark = "0.1" 
+        points [35]:
+            number = 16.040867455394036 
+            mark = "0.1" 
+        points [36]:
+            number = 16.502024033482524 
+            mark = "0.1" 
+        points [37]:
+            number = 16.947881578174716 
+            mark = "0.1" 
+        points [38]:
+            number = 17.408856129888022 
+            mark = "0.1" 
+        points [39]:
+            number = 17.870012707976514 
+            mark = "0.1" 
+        points [40]:
+            number = 18.309313524070287 
+            mark = "0.1" 
+        points [41]:
+            number = 18.770470102158775 
+            mark = "0.1" 
+        points [42]:
+            number = 19.242554561244624 
+            mark = "0.1" 
+        points [43]:
+            number = 19.705896715532585 
+            mark = "0.1" 
+        points [44]:
+            number = 20.164867717421604 
+            mark = "0.1" 
+        points [45]:
+            number = 20.623838719310623 
+            mark = "0.1" 
+        points [46]:
+            number = 21.106851059393826 
+            mark = "0.1" 
+        points [47]:
+            number = 21.57977655872951 
+            mark = "0.1" 
+        points [48]:
+            number = 22.05841774641377 
+            mark = "0.1" 
+        points [49]:
+            number = 22.508646443504905 
+            mark = "0.1" 
+        points [50]:
+            number = 22.961060716795508 
+            mark = "0.1" 
+        points [51]:
+            number = 23.422217294883996 
+            mark = "0.1" 
+        points [52]:
+            number = 23.885559449171957 
+            mark = "0.1" 
+        points [53]:
+            number = 24.33360257006362 
+            mark = "0.1" 
+        points [54]:
+            number = 24.771782626074334 
+            mark = "0.1" 
+    item [2]:
+        class = "TextTier" 
+        name = "beat-level-syncopation" 
+        xmin = 0 
+        xmax = 25.08950113378685 
+        points: size = 27 
+        points [1]:
+            number = 0.6069848645167105 
+            mark = "0.3" 
+        points [2]:
+            number = 1.4661079175025504 
+            mark = "0.3" 
+        points [3]:
+            number = 2.3664586390805136 
+            mark = "0.3" 
+        points [4]:
+            number = 3.309555982454463 
+            mark = "0.3" 
+        points [5]:
+            number = 4.2312800149304195 
+            mark = "0.3" 
+        points [6]:
+            number = 5.169034030579871 
+            mark = "0.3" 
+        points [7]:
+            number = 6.1210207241432055 
+            mark = "0.3" 
+        points [8]:
+            number = 7.061446403654906 
+            mark = "0.3" 
+        points [9]:
+            number = 7.969812116819617 
+            mark = "0.3" 
+        points [10]:
+            number = 8.888864485433324 
+            mark = "0.3" 
+        points [11]:
+            number = 9.786543543149039 
+            mark = "0.3" 
+        points [12]:
+            number = 10.732312550385238 
+            mark = "0.3" 
+        points [13]:
+            number = 11.637428583411092 
+            mark = "0.2" 
+        points [14]:
+            number = 12.567167607473797 
+            mark = "0.2" 
+        points [15]:
+            number = 13.502249959261 
+            mark = "0.2" 
+        points [16]:
+            number = 14.4480189664972 
+            mark = "0.2" 
+        points [17]:
+            number = 15.377757990559903 
+            mark = "0.2" 
+        points [18]:
+            number = 16.268240034662707 
+            mark = "0.2" 
+        points [19]:
+            number = 17.165919092378424 
+            mark = "0.2" 
+        points [20]:
+            number = 18.09031478871663 
+            mark = "0.2" 
+        points [21]:
+            number = 19.009367157330338 
+            mark = "0.2" 
+        points [22]:
+            number = 19.939106181393043 
+            mark = "0.2" 
+        points [23]:
+            number = 20.86350187773125 
+            mark = "0.2" 
+        points [24]:
+            number = 21.822747695370428 
+            mark = "0.2" 
+        points [25]:
+            number = 22.731113408535137 
+            mark = "0.2" 
+        points [26]:
+            number = 23.660852432597842 
+            mark = "0.2" 
+        points [27]:
+            number = 24.55318816258906 
+            mark = "0.2" 
+    item [3]:
+        class = "TextTier" 
+        name = "half-note-syncopation," 
+        xmin = 0 
+        xmax = 25.08950113378685 
+        points: size = 14 
+        points [1]:
+            number = 1.043985027267185 
+            mark = "0.4" 
+        points [2]:
+            number = 2.8473581342853604 
+            mark = "0.4" 
+        points [3]:
+            number = 4.682791207650525 
+            mark = "0.4" 
+        points [4]:
+            number = 6.63205721108476 
+            mark = "0.4" 
+        points [5]:
+            number = 8.414902095683706 
+            mark = "0.4" 
+        points [6]:
+            number = 10.249741229250153 
+            mark = "0.4" 
+        points [7]:
+            number = 12.093610098736027 
+            mark = "0.3" 
+        points [8]:
+            number = 13.973399268082423 
+            mark = "0.3" 
+        points [9]:
+            number = 15.814057178080352 
+            mark = "0.3" 
+        points [10]:
+            number = 17.647418755611387 
+            mark = "0.3" 
+        points [11]:
+            number = 19.463550013912695 
+            mark = "0.3" 
+        points [12]:
+            number = 21.33482660102774 
+            mark = "0.3" 
+        points [13]:
+            number = 23.185641417483936 
+            mark = "0.3" 
+        points [14]:
+            number = 24.98029373605741 
+            mark = "0.3" 
+    item [4]:
+        class = "TextTier" 
+        name = "half-note-non-syncopation" 
+        xmin = 0 
+        xmax = 25.08950113378685 
+        points: size = 14 
+        points [1]:
+            number = 0.22056335543876876 
+            mark = "0.4" 
+        points [2]:
+            number = 1.8993501337662715 
+            mark = "0.4" 
+        points [3]:
+            number = 3.767054094309657 
+            mark = "0.5" 
+        points [4]:
+            number = 5.6125302317132295 
+            mark = "0.4" 
+        points [5]:
+            number = 7.493532943653355 
+            mark = "0.5" 
+        points [6]:
+            number = 9.33281084933058 
+            mark = "0.4" 
+        points [7]:
+            number = 11.188868948291447 
+            mark = "0.4" 
+        points [8]:
+            number = 13.041390553019923 
+            mark = "0.4" 
+        points [9]:
+            number = 14.90758288258923 
+            mark = "0.4" 
+        points [10]:
+            number = 16.714199549953186 
+            mark = "0.3" 
+        points [11]:
+            number = 18.521453478260877 
+            mark = "0.3" 
+        points [12]:
+            number = 20.387765319151345 
+            mark = "0.3" 
+        points [13]:
+            number = 22.290861144497008 
+            mark = "0.3" 
+        points [14]:
+            number = 24.10689627435165 
+            mark = "0.3" 
+    item [5]:
+        class = "TextTier" 
+        name = "bar_level" 
+        xmin = 0 
+        xmax = 25.08950113378685 
+        points: size = 7 
+        points [1]:
+            number = 0.21936757873630067 
+            mark = "1" 
+        points [2]:
+            number = 3.766557750478567 
+            mark = "1" 
+        points [3]:
+            number = 7.493532943653355 
+            mark = "1" 
+        points [4]:
+            number = 11.188868948291447 
+            mark = "1" 
+        points [5]:
+            number = 14.904464544590995 
+            mark = "1" 
+        points [6]:
+            number = 18.519703227005806 
+            mark = "1" 
+        points [7]:
+            number = 22.28434600856179 
+            mark = "1" 

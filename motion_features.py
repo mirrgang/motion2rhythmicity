@@ -1,21 +1,23 @@
 from numpy import genfromtxt
+import numpy as np
 from glob import glob
 from numpy import gradient
 from scipy import signal
 from sklearn.decomposition import PCA
 
 
-def get_movement_features(directory, rate):
+def get_movement_features(directory, df):
     motion = get_motion_data(directory)
     jerk = get_jerk(motion)
-    adjusted_motion_features = get_adjusted_motion(jerk, rate)
+    adjusted_motion_features = get_adjusted_motion(jerk, df)
     return adjusted_motion_features
 
 
-def get_adjusted_motion(data, rate):
+def get_adjusted_motion(data, df):
     adjusted_jerk_data = {}
+    n = df *20; #20 seconds length
     for filename, jerk_data in data.items():
-        adjusted_jerk_data[filename] = signal.resample(jerk_data, num=rate)
+        adjusted_jerk_data[filename] = signal.resample(jerk_data, num=n)
     return adjusted_jerk_data
 
 

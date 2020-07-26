@@ -28,14 +28,13 @@ from glob import glob
 # compare to norm of jerk instead of jerk?
 
 
-def get_accentuation(directory, filter, rate):
+def get_accentuation(directory, filter, df):
     columns = ['tEnd', 'accentuation']  # time points only have end time in praat
     levels = read_annotation(directory, '/*' + filter + '_.csv', columns)
-    #TODO merge per song, not all ;)
     song_titles = get_song_titles(directory)
     merged_levels = merge_levels_per_song(song_titles, levels.copy())
     pre_processed_annotation = add_zeros_between_annotations(merged_levels)
-    resampled = adjust_sampling_rate(pre_processed_annotation, rate)
+    resampled = adjust_sampling_rate(pre_processed_annotation, df)
     return resampled
 
 
@@ -47,16 +46,20 @@ def read_annotation(directory, filter, columns):
     return annotations
 
 
-def adjust_sampling_rate(data, rate):
+def adjust_sampling_rate(data, df):
     adjusted_data = {}
+    duration = df*25
+    offset_end = df*5
+    offset_beginning = df*5
     for filename, df in data.items():
         timestamps = pd.to_datetime(df['tEnd'], unit='s')
         series = pd.Series(df['accentuation'].values, index=timestamps)
         newFreq = series.resample('10ms').asfreq()
         newSeries = series.reindex(newFreq.index, method='nearest', tolerance=pd.Timedelta('10ms')).interpolate(method='polynomial', order=2)
-        newValues = signal.resample(newSeries, num=rate)
-        data = np.column_stack((np.arange(0, 25, 25 / rate).transpose(), newValues))
+        newValues = signal.resample(newSeries, num=duration)
+        data = np.column_stack((np.arange(0, 25, 25 / duration).transpose(), newValues))
         adjusted_data[filename] = pd.DataFrame(data, columns=['tEnd', 'accentuation'])
+        adjusted_data[filename] = adjusted_data[filename].truncate(before=offset_beginning, after=(duration - offset_end-1))
     return adjusted_data
 
 
@@ -113,8 +116,9 @@ def visualize_annotations(song_title):
     columns = ['tEnd', 'accentuation']  # time points only have end time in praat
     ######## HALF NOTE LEVEL ######################################
     filter_half_note = '[2]'
+    song_titles = [song_title]
     levels = read_annotation('annotations_all_levels', '/' + song_title + '*' + filter_half_note + '_.csv', columns)
-    merged_levels = merge_levels(levels.copy())
+    merged_levels = merge_levels_per_song(song_titles, levels.copy())
     pre_processed_annotation = add_zeros_between_annotations(merged_levels)
     resampled = adjust_sampling_rate(pre_processed_annotation, 250)
     key_non_syncopated_2 = list(levels.keys())[0]
@@ -154,7 +158,7 @@ def visualize_annotations(song_title):
     ############# BEAT LEVEL ##########################################
     filter_beat = '[2-4]'
     levels_4 = read_annotation('annotations_all_levels', '/' + song_title + '*' + filter_beat + '_.csv', columns)
-    merged_levels_4 = merge_levels(levels_4.copy())
+    merged_levels_4 = merge_levels_per_song(song_titles, levels_4.copy())
     pre_processed_annotation_4 = add_zeros_between_annotations(merged_levels_4)
     resampled_4 = adjust_sampling_rate(pre_processed_annotation_4, 250)
     search_key = 'syncopation_4'
@@ -195,7 +199,7 @@ def visualize_annotations(song_title):
     ############# EIGHTH NOTE LEVEL ###################################
     filter_eighth_note = '[2-8]'
     levels_8 = read_annotation('annotations_all_levels', '/' + song_title + '*' + filter_eighth_note + '_.csv', columns)
-    merged_levels_8 = merge_levels(levels_8.copy())
+    merged_levels_8 = merge_levels_per_song(song_titles, levels_8.copy())
     pre_processed_annotation_8 = add_zeros_between_annotations(merged_levels_8)
     resampled_8 = adjust_sampling_rate(pre_processed_annotation_8, 250)
     search_key = 'syncopation_8'
