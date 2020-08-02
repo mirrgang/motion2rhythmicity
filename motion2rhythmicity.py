@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 
 def main():
 
-#    visualize_annotations("Monument")
+    #visualize_annotations("Chandelier")
 
     df = 30
 
@@ -33,17 +33,16 @@ def main():
     y_true = get_true_labels(motion, target_names)
     y_predicted = get_labels(classify_by_TLCC(results).values(), target_names)
     y_random = classify_randomly(len(motion), 0, 13)
-    random_report = classification_report(y_true, y_random, target_names=target_names, output_dict=True, digits=4)
+    random_report = classification_report(y_true, y_random, target_names=target_names, output_dict=True, digits=2)
     print(random_report)
 
-    print(classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=4))
+    print(classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=2))
 
-    random_report_df = pandas.DataFrame.from_dict(random_report).transpose()
+    random_report_df = pandas.DataFrame.from_dict(random_report).round(3).transpose()
     random_report_df.to_csv('classification_results/classification_report_random.csv')
     report_tlcc = classification_report(y_true, y_predicted, target_names=target_names, output_dict=True, digits=4)
-    tlcc_report_df = pandas.DataFrame(report_tlcc).transpose()
+    tlcc_report_df = pandas.DataFrame.from_dict(report_tlcc).round(3).transpose()
     tlcc_report_df.to_csv('classification_results/classification_report_tlcc.csv')
-
 
     plt.plot(music["GirlOnFire"]['accentuation'])
     plt.plot(pre_processed_data["motion_phone/GirlOnFire_#12_acc.csv"])
