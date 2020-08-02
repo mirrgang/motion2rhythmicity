@@ -28,8 +28,6 @@ def main():
     results = compute_TLCC(pre_processed_data, music)
     target_names = list(get_song_titles(directory_music))
     ### remove when complete
-    target_names.append("AnotherStar")
-    target_names.append("CosmicLove")
     target_names.append("YouDontKnowMyName")
     #####
     y_true = get_true_labels(motion, target_names)
